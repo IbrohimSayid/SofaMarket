@@ -11,6 +11,7 @@ import Login from './pages/LogIn/Login';
 import Register from './pages/Register/Register';
 import MainLayout from './layouts/MainLayout';
 import Header from './components/Header'; 
+import ProductDetails from './components/ProductsDetails'
 
 export const TokenContext = createContext('');
 export const UserContext = createContext('');
@@ -34,6 +35,7 @@ function App() {
         <Route path='/about' element={<MainLayout><About></About></MainLayout>} />
         <Route path='/products' element={<MainLayout><Products></Products></MainLayout>} />
         <Route path='/cart' element={<MainLayout><Cart></Cart></MainLayout>} />
+        <Route path='/products/:id' element={<ProductDetails></ProductDetails>} />
         {
           token && <>
             <Route path='/checkout' element={<Checkout></Checkout>} />

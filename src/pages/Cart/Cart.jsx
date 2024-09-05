@@ -41,7 +41,7 @@ function Cart() {
 
   const totals = calculateTotal();
 
-  if (cartItems.length === 0) return <div>Savat bo'sh</div>;
+  if (cartItems.length === 0) return <div className="bg-slate-50 h-screen">Savat bo'sh</div>;
 
   return (
     <>
